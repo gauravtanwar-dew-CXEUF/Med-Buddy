@@ -1,0 +1,7 @@
+[
+  {"title": "Home", "icon": "home"},
+  {"title": "Doctors", "icon": "doctors"},
+  {"title": "Medicines", "icon": "medicines"},
+  {"title": "Lab Tests", "icon": "flask"},
+  {"title": "Health Record", "icon": "file-medical"}
+]
