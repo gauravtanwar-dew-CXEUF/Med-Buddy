@@ -5,7 +5,7 @@ import 'package:med_buddy/ui_screens/lab_tests_page.dart';
 import 'package:med_buddy/ui_screens/med_home_page.dart';
 import 'package:med_buddy/ui_screens/medicines_page.dart';
 import '../model/loadmenudata.dart';
-import '../widgets/custome_header.dart';
+import '../widgets/custom_header.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);

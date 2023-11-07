@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:med_buddy/ui_screens/home_page.dart';
+import 'package:med_buddy/ui_screens/login_page.dart';
 import 'package:med_buddy/widgets/center_content.dart';
 
 import '../widgets/background_page.dart';
@@ -26,8 +27,10 @@ class _SplashScreenState extends State<SplashScreen> {
 
   navigatetoHomepage() async{
     await Future.delayed(Duration(milliseconds: 3000),(){});
-    Navigator.pushReplacement(context,
-        MaterialPageRoute(builder: (_) => HomePage()));
+   // Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => HomePage()));
+
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => LoginScreen()));
+
   }
   
   
