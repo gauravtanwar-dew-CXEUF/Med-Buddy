@@ -1,8 +1,14 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import '../widgets/custom_button.dart';
 import '../widgets/custom_text.dart';
 import '../widgets/custom_text_field.dart';
 import '../widgets/welcome_med_buddy.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+
+
 
 class SignupScreen extends StatefulWidget {
   @override
@@ -96,7 +102,8 @@ class _SignupScreenState extends State<SignupScreen> {
                   text: 'Sign Up',
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
-                      // All fields are valid, you can save the data locally or perform further actions
+                      Navigator.of(context).pop();
+                    //  _saveUserDataAndNavigate(context);
                     }
                   },
                 ),
@@ -143,4 +150,44 @@ class _SignupScreenState extends State<SignupScreen> {
     final phoneRegex = RegExp(r'^[0-9]{10}$');
     return phone != null && phoneRegex.hasMatch(phone);
   }
+
+  void _saveUserDataAndNavigate(BuildContext context) async {
+    // Show a loader or progress indicator (optional)
+    // Assuming the user has successfully signed up
+    // Save user data locally
+    await _saveUserDataLocally();
+
+    // Show a toast message for successful signup
+    Fluttertoast.showToast(
+      msg: 'Signup successful',
+      toastLength: Toast.LENGTH_SHORT,
+      gravity: ToastGravity.BOTTOM,
+      timeInSecForIosWeb: 1,
+      backgroundColor: Colors.green,
+      textColor: Colors.white,
+    );
+
+    // Navigate to the login screen
+    Navigator.of(context).pop();
+  }
+
+
+  // Assuming the user has successfully signed up
+ Future<void> _saveUserDataLocally() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+
+    final userData = {
+      'firstName': firstNameController.text,
+      'lastName': lastNameController.text,
+      'email': emailController.text,
+      'mobileNumber': mobileController.text,
+      'password': passwordController.text,
+    };
+
+    prefs.setString('userData', jsonEncode(userData));
+  }
+
+
+
+
 }

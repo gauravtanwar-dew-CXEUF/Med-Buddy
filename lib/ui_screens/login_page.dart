@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:med_buddy/ui_screens/home_page.dart';
 import 'package:med_buddy/ui_screens/signup_page.dart';
 import 'package:med_buddy/widgets/welcome_med_buddy.dart';
 import '../widgets/custom_button.dart';
@@ -71,6 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
                     // Handle login logic here
+                    Navigator.push(context, MaterialPageRoute(builder: (_) => HomePage()));
                   }
                 },
                 width: 200,
