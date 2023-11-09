@@ -1,0 +1,42 @@
+[
+  {
+    "type": "General Physician",
+    "icon": "general_physician_icon.png",
+    "backgroundColor": "#3498db"
+  },
+  {
+    "type": "Child Specialist",
+    "icon": "child_specialist_icon.png",
+    "backgroundColor": "#e74c3c"
+  },
+  {
+    "type": "Dermatologist",
+    "icon": "dermatologist_icon.png",
+    "backgroundColor": "#27ae60"
+  },
+  {
+    "type": "Psychiatrist",
+    "icon": "psychiatrist_icon.png",
+    "backgroundColor": "#f39c12"
+  },
+  {
+    "type": "Gynaecologist",
+    "icon": "gynaecologist_icon.png",
+    "backgroundColor": "#d35400"
+  },
+  {
+    "type": "Neurologist",
+    "icon": "neurologist_icon.png",
+    "backgroundColor": "#8e44ad"
+  },
+  {
+    "type": "Urologist",
+    "icon": "urologist_icon.png",
+    "backgroundColor": "#16a085"
+  },
+  {
+    "type": "Cardiologist",
+    "icon": "cardiologist_icon.png",
+    "backgroundColor": "#c0392b"
+  }
+]
